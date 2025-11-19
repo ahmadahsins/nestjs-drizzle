@@ -1,5 +1,6 @@
 import { pgTable, serial, text, integer, primaryKey, index } from "drizzle-orm/pg-core";
 import { users } from "./users.shema";
+import { relations } from "drizzle-orm";
 
 export const groups = pgTable("groups", {
   id: serial("id").primaryKey(),
@@ -19,3 +20,14 @@ export const usersToGroups = pgTable("usersToGroups", {
     index("userIdIndex").on(table.userId),
   ]
 );
+
+export const usersToGroupsRelations = relations(usersToGroups, ({ one }) => ({
+  users: one(users, {
+    fields: [usersToGroups.userId],
+    references: [users.id],
+  }),
+  groups: one(groups, {
+    fields: [usersToGroups.groupId],
+    references: [groups.id],
+  }),
+}));
