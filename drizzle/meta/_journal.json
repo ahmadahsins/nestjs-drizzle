@@ -15,6 +15,20 @@
       "when": 1763463064899,
       "tag": "0001_polite_manta",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1763558425965,
+      "tag": "0002_greedy_boom_boom",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "7",
+      "when": 1763559951397,
+      "tag": "0003_fine_monster_badoon",
+      "breakpoints": true
     }
   ]
 }
