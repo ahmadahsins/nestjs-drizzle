@@ -29,6 +29,13 @@
       "when": 1763559951397,
       "tag": "0003_fine_monster_badoon",
       "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "7",
+      "when": 1763561130543,
+      "tag": "0004_lucky_solo",
+      "breakpoints": true
     }
   ]
 }
